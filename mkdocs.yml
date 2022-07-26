@@ -1,0 +1,8 @@
+site_name: Folder
+site_description: Harness portal code
+repo_url: https://github.com/kanikamittal09/backstage-demo
+edit_uri: edit/master/subfolder/docs/
+nav:
+  - 'Home': 'index.md'
+plugins:
+  - techdocs-core
