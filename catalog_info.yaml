@@ -2,20 +2,6 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Folder
-  title: Folder
-  description: main folder
-  annotations:
-    backstage.io/techdocs-ref: dir:.
-spec:
-  owner: Team-A
-  domain: core
-  type: service
-  lifecycle: production
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
   name: Subfolder
   title: Subfolder
   description: subfolder
@@ -24,6 +10,19 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  subcomponentOf: folder
+  owner: Team-A
+  domain: core
+  ---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: SubfolderA
+  title: SubfolderA
+  description: subfolderA
+  annotations:
+    backstage.io/techdocs-ref: dir:./subfolderA
+spec:
+  type: service
+  lifecycle: production
   owner: Team-A
   domain: core
